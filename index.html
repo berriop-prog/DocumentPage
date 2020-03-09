@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QGis Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid bg-info py-5">
+        <div class="container text-white">
+            <h1 class="display-3"> <b> QGIS DOCUMENTACIÓN</b></h1>
+            <p class="lead">QGIS has a lot of documentation. All documentation is in English but some documents such as
+                the user guide are also available in other languages.</p>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active text-info" href="#pautas">Pautas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="#contribucion">Una contribución</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="#guia">Guías</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="#escribiendo">Escribiendo código</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="#traduccion">Traducciones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="#sustituciones">Sustituciones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="#bibliografia">Bibliografía</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <main id="main-doc">
+            <main id="pautas" class="main-section">
+                <header>
+                    <h1 class="display-3 text-info m-3 py-2">Pautas de documentación</h1>
+                </header>
+                <article class="col-sm-8 col-md-9">
+                    <p class="text-justify m-3 py-2">La documentación de QGIS se creará automáticamente en el servidor a
+                        las 0, 8 a.m., 4 p.m.,
+                        US/Pacific (hora del Pacífico).</p>
+                    <p class="text-justify m-3 py-2">Los archivos fuente de la documentación de QGIS están disponibles
+                        en <a href="https://github.com/qgis/QGIS-Documentation">GitHub.</a> Se escriben principalmente utilizando la sintaxis de
+                        formato reStructuredText (reST), junto con algunos scripts del conjunto de herramientas Sphinx
+                        para procesar posteriormente la salida HTML.</p>
+                    <p class="text-justify m-3 py-2">Los siguientes capítulos lo guiarán a través del aprendizaje:</p>
+                    <ul class="text-justify m-3">
+                        <li class="text-justify m-3">Cómo administrar los archivos fuente de documentación usando el
+                            sistema git y la plataforma
+                            GitHub en la que están almacenados</li>
+                        <li class="text-justify m-3">Cómo modificar los textos, proporcionar capturas de pantalla… de
+                            manera compatible.</li>
+                        <li class="text-justify m-3 ">Cómo compartir y garantizar que sus modificaciones se usen en los
+                            documentos oficiales</li>
+                    </ul>
+                </article>
+            </main>
+            <main id="contribucion" class="main-section">
+                <header>
+                    <h1 class="display-3 text-info m-3 py-2">Una contribución paso a paso</h1>
+                </header>
+                <article class="col-sm-8 col-md-9">
+                    <p class="text-justify m-3 py-2">If you are reading these lines, it is certainly because you are
+                        willing
+                        to contribute to writing QGIS
+                        documentation and are looking for a how-to. You have come to the right place! The current
+                        document
+                        will guide you through the different ways to achieve this objective, showing you the main steps
+                        to
+                        follow, the tricks you can use and the traps you should be aware of.</p>
+                    <p class="text-justify m-3 py-2">Documentation sources are stored using the git version control
+                        system  and are available on GitHub. There are two main ways, not mutually exclusive, to
+                        modify the files:</p>
+                </article>
+            </main>
+            <main id="guia" class="main-section">
+                <header>
+                    <h1 class="display-3 text-info m-3 py-2">Guías para escritores</h1>
+                </header>
+                <article class="col-sm-8 col-md-9">
+                    <h1 class="display-4 m-3 py-2">Escribir Documentación</h1>
+                    <h2 class="display-5 m-3 py-2">Encabezados</h2>
+                    <p class="text-justify m-3 py-1">A cada webpage de la documentación le corresponde un archivo «.rst»
+                    </p>
+                    <p class="text-justify m-3 py-1">Sections used to structure the text are identified through their
+                        title which is underlined (and
+                        overlined for the first level). Same level titles must use same character for underline
+                        adornment.
+                        In QGIS Documentation, you should use following styles for chapter, section, subsection and
+                        minisec.
+                    </p>
+                    <h2 class="display-5 m-3 py-2">Listas</h2>
+                    <p class="text-justify m-3 py-1">Lists are useful for structuring the text. Here are some simple
+                        rules common to all lists:</p>
+                    <ul class="text-justify m-3">
+                        <li class="text-justify m-3">Start all list items with a capital letter</li>
+                        <li class="text-justify m-3">Do not use punctuation after list items that only contain a single
+                            simple sentence</li>
+                        <li class="text-justify m-3">Use period (.) as punctuation for list items that consist of
+                            several sentences or a single
+                            compound sentence</li>
+                    </ul>
+
+                    <h2 class="display-5 m-3 py-2">Inline Tags</h2>
+                    <p class="text-justify m-3 ">You can use some tags inside the text to emphasize some items.</p>
+                    <ul class="text-justify m-3">
+                        <li class="text-justify m-3 py-1"><b>Menu GUI: </b> to mark a complete sequence of menu
+                            selections, including selecting submenus
+                            and choosing a specific operation, or any subsequence of such a sequence.</li>
+                        <code><samp class="border border-secondary m-3 py-1" >:menuselection:`menu --> submenu`</samp></code>
+                        <li class="text-justify m-3 py-1"> <b> Dialog and Tab title:</b> Labels presented as part of an
+                            interactive user interface
+                            including window title, tab title, button and option labels.</li>
+                        <code> <samp  class="border border-secondary m-3 py-1">:guilabel:`title`</samp></code>
+                        <li class="text-justify m-3 py-1"> <b>Nombre de archivo o directorio</b></li>
+                        <code> <samp  class="border border-secondary m-3 py-1">:file:`README.rst`</samp></code>
+                        <li class="text-justify m-3 py-1">Icon with popup text belonging to Icon</li>
+                        <code> <samp  class="border border-secondary m-3 py-1">|icon| :sup:`popup_text`</samp></code>
+                        <li class="text-justify m-3 py-1">Atajos de teclado</li>
+                        <code> <samp  class="border border-secondary m-3 py-1">|:kbd:`Ctrl+B`</samp></code>
+                        <p class="text-justify m-3 py-2">will show <kbd>ctrl+B</kbd></p>
+                        <p class="text-justify m-3 py-2">When describing keyboard shortcuts, the following conventions
+                            should be used:
+                            <ul class="text-justify m-3">
+                                <li class="text-justify m-3 ">Letter keys are displayed using uppercase: <kbd>S</kbd>
+                                </li>
+                                <li class="text-justify m-3 ">Special keys are displayed with an uppercase first letter:
+                                    <kbd>Esc</kbd></li>
+                                <li class="text-justify m-3">Key combinations are displayed with a <kbd>+ </kbd> sign
+                                    between keys, without
+                                    spaces:<kbd>Shift+R</kbd></li>
+                            </ul>
+                        </p>
+                        <li class="text-justify m-3 py-1"><b>Texto del usuario</b> </li>
+                        <code> <samp  class="border border-secondary m-3 py-1">``label``</samp></code>
+                    </ul>
+
+                    <h2 class="display-5 m-3 py-2">Etiqueta/referencia</h2>
+                    <p class="text-justify m-3">References are used to place anchors inside the text. It then helps you
+                        create and call hyperlinks
+                        between sections or page.</p>
+                    <p class="text-justify m-3 ">The example below creates the anchor of a section (e.g.,
+                        Label/reference title)</p>
+                    <code> <samp  class="border border-secondary m-3 py-1">.. _my_anchor:
+
+                    Label/reference
+                    ---------------`</samp></code>
+                    <p class="text-justify m-3 py-2">To call the reference in the same page, use</p>
+                    <code> <samp  class="border border-secondary m-3 py-1" >see my_anchor_ for more information.</samp></code>
+
+                    <p class="text-justify m-3 py-1">Que devolverá:
+
+                        see my_anchor for more information.</p>
+                    <p class="text-justify m-3 ">Notice how it will jump to the following line/thing following the
+                        “anchor”. Normally to declare this
+                        label you do not need to use apostrophes but you do need to use empty lines before and after the
+                        anchor.</p>
+                </article>
+            </main>
+
+
+            <main id="escribiendo" class="main-section">
+                <header>
+                    <h1 class="display-3 text-info m-3 py-2">Escribiendo código</h1>
+                </header>
+                <article class="col-sm-8 col-md-9">
+                    <p class="text-justify m-3 ">Si está planeando agregar o actualizar algunos capítulos de Libro de
+                        Recetas para Desarrollador
+                        PyQGIS, debe seguir algunas reglas para habilitar la prueba automática de los fragmentos de
+                        código.
+                    </p>
+                    <p class="text-justify m-3">La verificación es realmente importante porque permite la comprobación
+                        automática del código. Los
+                        fragmentos de código con errores o el código que utiliza métodos obsoletos fallarán y la
+                        notificación le ayudará a solucionar los problemas.</p>
+                    <p class="text-justify m-3 ">Para verificación, usamos Sphinx doctest extension. Consulte la
+                        documentación de la extensión para
+                        obtener información más detallada.</p>
+                    <h2 class="display-6 m-3 py-2">Cómo escribir fragmentos de código comprobables</h2>
+                    <p class="text-justify m-3">Escribir fragmentos de código comprobables no es tan diferente del
+                        método antiguo. Básicamente,
+                        necesitas usar una directiva Sphinx diferente.</p>
+
+                </article>
+            </main>
+            <main id="traduccion" class="main-section">
+                <header>
+                    <h1 class="display-3 text-info m-3 py-2">Pautas de traducción</h1>
+                </header>
+                <article class="col-sm-8 col-md-9">
+                    <p class="text-justify m-3 py-2">Este manual aspira a ayudar al traductor. Primero se explica el
+                        proceso general de como se hace técnicamente una traducción. Después la traducción se interpreta
+                        desde el presente documento rst en inglés y se traduce al Holandés. Finálmente se proporciona un
+                        resumen de :ref:`Rules of translation <translation_summary>.</p>
+                    <h2>Proceso de traducción</h2>
+                    <p class="text-justify m-3 py-2">La Documentación de QGIS se escribe en inglés con archivos .rst.
+                        Con el fin de proporcionar traducciones:</p>
+
+                    <ol class="text-justify m-3">
+                        <li class="text-justify m-3 py-1">Unas lineas de codigo preconstruidas crea archivos de
+                            traducción nombrados :archivo:`.po` para el idioma inglés en la
+                            Directorio:archivo:/QGIS-Documentación/i18n/en.</li>
+                        <li class="text-justify m-3 py-1">Entonces estos «originales» son copiados por las lineas de
+                            codigo a los archivos :archivo:`i18n` de los directorios de otros idiomas.</li>
+                        <li class="text-justify m-3 py-">Las frases en los archivos :archivo:`.po` son impulsadas a la
+                            plataforma web Transifex, y se disponen a los traductores quienes pueden empezar a traducir
+                            del ingles a sus idiomas con el editor.</li>
+                        <li class="text-justify m-3 py-1">Al final del día, unas lineas de codigo devuelven todas las
+                            traducciones validadas.</li>
+                        <li class="text-justify m-3 py-2">En la próxima construcción de la Documentación (la cuál sucede
+                            al menos una vez al día), unas lineas de codigo reprocesan las frases para crear una salida
+                            traducida.</li>
+                        <li class="text-justify m-3 py-2">Mas tarde se actualiza el documento :archivo`.rst` y se crea
+                            un nuevo :archivo:`.po` en la parte inglesa. Los contenidos de este nuevo archivo se
+                            mezclarán con los ya existentes archivos :archivo:.po` para cada lenguaje. Esto significa
+                            que cuando se añade una nueva línea a un documento :archivo:`.rst` que ya estaba traducido,
+                            solo las nuevas/actualizadas frases son añadidas al archivo :archivo:`.po` y necesitan ser
+                            traducidas. La cantidad de trabajo para actualizar el próximo lanzamiento debería ser
+                            relativamente pequeño.</li>
+                    </ol>
+
+                    <p class="text-justify m-3 py-2">Actualmente se utilizan dos herramientas diferentes para hacer
+                        traducciones en QGIS:</p>
+                    <ul class="text-justify m-3">
+                        <li class="text-justify m-3 py-1">La plataforma web de <a href="https: //www.transifex.com">Transifex</a>, la mas fácil y recomendad forma de traducir QGIS, realiza
+                            de manera transparente el proceso descrito anteriormente y proporciona todos los textos
+                            traducibles en un sitio al traductor. Solo escoge los archivos que quiera traducir. Los
+                            archivos traducidos son recopilados en la plataforma hasta que se impulsa un nuevo
+                            lanzamiento.</li>
+                        <li class="text-justify m-3 py-1">Qt Linguist, una herramienta de desarrollo Qt, requiere que el
+                            traductor extraiga localmente los archivos :archivo:`.po` (o :archivo:`.ts`) del código
+                            fuente, lo traduzca y lo devuelva.</li>
+                    </ul>
+                    <p class="text-justify m-3 py-2">Recuerde que independientemente de la herramienta que elija, las
+                        reglas de traducción son las mismas.</p>
+                </article>
+            </main>
+            <main id="sustituciones" class="main-section">
+                <header>
+                    <h1 class="display-3 text-info m-3 py-2">Sustituciones</h1>
+                </header>
+                <article class="col-sm-8 col-md-9">
+                    <h2 class="display-5 m-3 py-2">Uso</h2>
+                    <p class="text-justify m-3 py-2">Para facilitar el uso de iconos en los manuales de QGIS, los
+                        reemplazos se definen para cada icono en el archivo /source/substitutions.txt en el
+                        QGIS-Documentation repository y algunas de estas sustituciones se enumeran a continuación. En
+                        consecuencia, cuando desee utilizar un icono de la aplicación QGIS en la documentación, existe
+                        una gran posibilidad de que ya haya una sustitución que pueda/deba usarse.</p>
+                    <p class="text-justify m-3 py-2">Si no existe una sustitución:</p>
+                    <ol class="text-justify m-3">
+                        <li class="text-justify m-3 py-1">Check the documentation repository whether the icon is
+                            available in /static/common folder. If no image, then you need to find and copy the icon
+                            image file from QGIS repository (often under
+                            https://github.com/qgis/QGIS/blob/release-3_4/images/themes/default folder) and paste (in
+                            .png format) under /static/common folder. For convenience and update, it’s advised to keep
+                            filename when possible.</li>
+
+                        <li class="text-justify m-3 py-1">Cree la referencia a la sustitución en el archivo
+                            /source/substitutions.txt siguiendo el siguiente ejemplo. El texto de reemplazo debe estar
+                            en camelCase. </li>
+                    </ol>
+                </article>
+            </main>
+            <main id="bibliografia" class="main-section">
+                <header>
+                    <h1 class="display-3 text-info m-3 py-2">Bibliografía</h1>
+                </header>
+                <article class="col-sm-8 col-md-9">
+                    <p class="text-justify m-3 py-2">La documentación usada para este ejercicio es de <a href="https://docs.qgis.org/3.4/es/docs/documentation_guidelines/index.html">QGIS-Documentación</a>
+                    </p>
+                </article>
+            </main>
+        </main>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+
+</html>
